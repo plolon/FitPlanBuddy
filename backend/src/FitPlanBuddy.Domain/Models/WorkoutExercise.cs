@@ -1,6 +1,6 @@
 ﻿namespace FitPlanBuddy.Domain.Models
 {
-    public class WorkoutExercise
+    public class WorkoutExercise : DomainEntity
     {
         public int ExerciseId { get; set; }
         public Exercise Exercise { get; set; }
