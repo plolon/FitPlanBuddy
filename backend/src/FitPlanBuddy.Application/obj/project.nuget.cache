@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "vMa0KQJ4+tyMa9rNI7RLJDPz6JCUxfPsgSewdM025WDpLtWNax5E7I9Od+5aH0wmB/QzTdWNyg1fIwDcJBmXDA==",
+  "dgSpecHash": "ZnpI5KGwxpQb/pAdvo63KKaSnKUIJQb7eEoQWASVfCSwbVv1+4niwCHjq6FC+iEfUfuW7zZecQvofXfPit4Jig==",
   "success": true,
   "projectFilePath": "D:\\repo\\FitPlanBuddy\\backend\\src\\FitPlanBuddy.application\\FitPlanBuddy.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\dawid\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\dawid\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\dawid\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\dawid\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",

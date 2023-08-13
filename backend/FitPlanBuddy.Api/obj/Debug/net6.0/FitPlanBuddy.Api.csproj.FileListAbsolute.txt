@@ -83,3 +83,6 @@ D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\obj\Debug\net6.0\refint\FitPlanBud
 D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\obj\Debug\net6.0\FitPlanBuddy.Api.pdb
 D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\obj\Debug\net6.0\FitPlanBuddy.Api.genruntimeconfig.cache
 D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\obj\Debug\net6.0\ref\FitPlanBuddy.Api.dll
+D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\bin\Debug\net6.0\AutoMapper.dll
+D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\bin\Debug\net6.0\MediatR.dll
+D:\repo\FitPlanBuddy\backend\FitPlanBuddy.Api\bin\Debug\net6.0\MediatR.Contracts.dll

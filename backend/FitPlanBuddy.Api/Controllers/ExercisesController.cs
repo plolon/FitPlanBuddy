@@ -1,6 +1,6 @@
 ﻿using FitPlanBuddy.Application.Dto.ExerciseDto;
-using FitPlanBuddy.Domain.Models;
-using FitPlanBuddy.Domain.Repositories;
+using FitPlanBuddy.Application.Features.Exercises.Queries.GetAll;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitPlanBuddy.Api.Controllers
@@ -9,18 +9,17 @@ namespace FitPlanBuddy.Api.Controllers
     [ApiController]
     public class ExercisesController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly ISender _mediator;
 
-        public ExercisesController(IUnitOfWork unitOfWork)
+        public ExercisesController(ISender sender)
         {
-            _unitOfWork = unitOfWork;
+            _mediator = sender;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Exercise>>> GetAll()
+        public async Task<IEnumerable<ExerciseRead>> GetAll()
         {
-            var repo = await _unitOfWork.GetGenericRepositoryAsync<Exercise>();
-            return Ok(await repo.GetAll());
+            return await _mediator.Send(new GetAllExercisesRequest());
         }
     }
 }
