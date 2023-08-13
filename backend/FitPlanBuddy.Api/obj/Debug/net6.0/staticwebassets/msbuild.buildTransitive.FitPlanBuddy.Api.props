@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\FitPlanBuddy.Api.props" />
-</Project>
