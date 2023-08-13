@@ -5,27 +5,20 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{967E3AA8-6684-44E8-97EF-4F19B5B8C520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitPlanBuddy.Api", "src\FitPlanBuddy.api\FitPlanBuddy.Api.csproj", "{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitPlanBuddy.Application", "src\FitPlanBuddy.application\FitPlanBuddy.Application.csproj", "{11E9E848-C136-4B29-8489-AC1BCBE47282}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitPlanBuddy.Application", "src\FitPlanBuddy.application\FitPlanBuddy.Application.csproj", "{11E9E848-C136-4B29-8489-AC1BCBE47282}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitPlanBuddy.Domain", "src\FitPlanBuddy.domain\FitPlanBuddy.Domain.csproj", "{A03C5911-19EF-400D-A523-338A008D87B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitPlanBuddy.Domain", "src\FitPlanBuddy.domain\FitPlanBuddy.Domain.csproj", "{A03C5911-19EF-400D-A523-338A008D87B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitPlanBuddy.Database", "src\FitPlanBuddy.database\FitPlanBuddy.Database.csproj", "{61EBF947-6900-483A-B930-F2D1DF600C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitPlanBuddy.Database", "src\FitPlanBuddy.database\FitPlanBuddy.Database.csproj", "{61EBF947-6900-483A-B930-F2D1DF600C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitPlanBuddy.Api", "FitPlanBuddy.Api\FitPlanBuddy.Api.csproj", "{95CB1093-3A74-467B-90C5-759812AA0732}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11E9E848-C136-4B29-8489-AC1BCBE47282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11E9E848-C136-4B29-8489-AC1BCBE47282}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11E9E848-C136-4B29-8489-AC1BCBE47282}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,11 +31,21 @@ Global
 		{61EBF947-6900-483A-B930-F2D1DF600C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61EBF947-6900-483A-B930-F2D1DF600C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61EBF947-6900-483A-B930-F2D1DF600C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CB1093-3A74-467B-90C5-759812AA0732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CB1093-3A74-467B-90C5-759812AA0732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CB1093-3A74-467B-90C5-759812AA0732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CB1093-3A74-467B-90C5-759812AA0732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F4C071F4-CA13-47D4-978D-4C93CCFCBBF2} = {967E3AA8-6684-44E8-97EF-4F19B5B8C520}
 		{11E9E848-C136-4B29-8489-AC1BCBE47282} = {967E3AA8-6684-44E8-97EF-4F19B5B8C520}
 		{A03C5911-19EF-400D-A523-338A008D87B4} = {967E3AA8-6684-44E8-97EF-4F19B5B8C520}
 		{61EBF947-6900-483A-B930-F2D1DF600C90} = {967E3AA8-6684-44E8-97EF-4F19B5B8C520}
+		{95CB1093-3A74-467B-90C5-759812AA0732} = {967E3AA8-6684-44E8-97EF-4F19B5B8C520}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAD71F04-CBF3-45C5-8125-8184738D971F}
 	EndGlobalSection
 EndGlobal

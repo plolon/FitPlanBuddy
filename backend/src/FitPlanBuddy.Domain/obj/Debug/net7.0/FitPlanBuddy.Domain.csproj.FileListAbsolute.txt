@@ -1,0 +1,12 @@
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\bin\Debug\net7.0\FitPlanBuddy.Domain.deps.json
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\bin\Debug\net7.0\FitPlanBuddy.Domain.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\bin\Debug\net7.0\FitPlanBuddy.Domain.pdb
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.csproj.AssemblyReference.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.AssemblyInfoInputs.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.AssemblyInfo.cs
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.csproj.CoreCompileInputs.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\refint\FitPlanBuddy.Domain.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\FitPlanBuddy.Domain.pdb
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.domain\obj\Debug\net7.0\ref\FitPlanBuddy.Domain.dll
