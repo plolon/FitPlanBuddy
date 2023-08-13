@@ -1,13 +1,13 @@
-﻿using FitPlanBuddy.Domain.Models;
+﻿using FitPlanBuddy.Database;
+using FitPlanBuddy.Domain.Models;
 using FitPlanBuddy.Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace FitPlanBuddy.Application.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DbContext _dbContext;
-        public UnitOfWork(DbContext dbContext)
+        private readonly FPBDbContext _dbContext;
+        public UnitOfWork(FPBDbContext dbContext)
         {
             _dbContext= dbContext;
         }

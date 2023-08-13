@@ -1,0 +1,15 @@
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\bin\Debug\net6.0\FitPlanBuddy.Database.deps.json
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\bin\Debug\net6.0\FitPlanBuddy.Database.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\bin\Debug\net6.0\FitPlanBuddy.Database.pdb
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\bin\Debug\net6.0\FitPlanBuddy.Domain.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\bin\Debug\net6.0\FitPlanBuddy.Domain.pdb
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.csproj.AssemblyReference.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.AssemblyInfoInputs.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.AssemblyInfo.cs
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.csproj.CoreCompileInputs.cache
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.csproj.CopyComplete
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\refint\FitPlanBuddy.Database.dll
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\FitPlanBuddy.Database.pdb
+D:\repo\FitPlanBuddy\backend\src\FitPlanBuddy.database\obj\Debug\net6.0\ref\FitPlanBuddy.Database.dll

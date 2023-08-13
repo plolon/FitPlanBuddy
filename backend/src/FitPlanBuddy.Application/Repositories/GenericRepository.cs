@@ -1,12 +1,13 @@
-﻿using FitPlanBuddy.Domain.Repositories;
+﻿using FitPlanBuddy.Database;
+using FitPlanBuddy.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace FitPlanBuddy.Application.Repositories
 {
     public class GenericRepository<Entity> : IGenericRepository<Entity> where Entity : class
     {
-        private readonly DbContext _dbContext;
-        public GenericRepository(DbContext dbContext)
+        private readonly FPBDbContext _dbContext;
+        public GenericRepository(FPBDbContext dbContext)
         {
             if (dbContext is null)
             {
