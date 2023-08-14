@@ -1,16 +1,19 @@
-﻿using FitPlanBuddy.Database;
-using FitPlanBuddy.Domain.Models;
+﻿using FitPlanBuddy.Domain.Models;
 using FitPlanBuddy.Domain.Repositories;
 
-namespace FitPlanBuddy.Application.Repositories
+namespace FitPlanBuddy.Database.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
         private readonly FPBDbContext _dbContext;
-        public UnitOfWork(FPBDbContext dbContext)
+        public UnitOfWork(FPBDbContext dbContext, IExerciseRepository exerciseRepository)
         {
-            _dbContext= dbContext;
+            _dbContext = dbContext;
+            ExerciseRepository = exerciseRepository;
         }
+
+        public IExerciseRepository ExerciseRepository { get; }
+
         public async Task Complete()
         {
             await _dbContext.SaveChangesAsync();

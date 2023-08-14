@@ -1,5 +1,6 @@
 ﻿using FitPlanBuddy.Application.Dto.ExerciseDto;
 using FitPlanBuddy.Application.Features.Exercises.Queries.GetAll;
+using FitPlanBuddy.Application.Features.Exercises.Queries.GetAllWithDetails;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,9 +18,9 @@ namespace FitPlanBuddy.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ExerciseRead>> GetAll()
-        {
-            return await _mediator.Send(new GetAllExercisesRequest());
-        }
+        public async Task<IActionResult> GetAll(bool details) =>
+            details == true ?
+                Ok(await _mediator.Send(new GetAllExercisesWithDetailsRequest())) :
+                Ok(await _mediator.Send(new GetAllExercisesRequest()));
     }
 }

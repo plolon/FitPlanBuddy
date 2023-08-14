@@ -1,8 +1,7 @@
-﻿using FitPlanBuddy.Database;
-using FitPlanBuddy.Domain.Repositories;
+﻿using FitPlanBuddy.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace FitPlanBuddy.Application.Repositories
+namespace FitPlanBuddy.Database.Repositories
 {
     public class GenericRepository<Entity> : IGenericRepository<Entity> where Entity : class
     {
