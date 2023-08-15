@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\FitPlanBuddy.application\FitPlanBuddy.Application.csproj" />
-    <ProjectReference Include="..\src\FitPlanBuddy.database\FitPlanBuddy.Database.csproj" />
+    <ProjectReference Include="..\FitPlanBuddy.application\FitPlanBuddy.Application.csproj" />
+    <ProjectReference Include="..\FitPlanBuddy.database\FitPlanBuddy.Database.csproj" />
   </ItemGroup>
 
 </Project>
