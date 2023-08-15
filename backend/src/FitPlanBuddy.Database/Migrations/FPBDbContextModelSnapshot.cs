@@ -50,19 +50,9 @@ namespace FitPlanBuddy.Database.Migrations
                     b.Property<int>("MusclePartId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExerciseId1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MusclePartId1")
-                        .HasColumnType("int");
-
                     b.HasKey("ExerciseId", "MusclePartId");
 
-                    b.HasIndex("ExerciseId1");
-
                     b.HasIndex("MusclePartId");
-
-                    b.HasIndex("MusclePartId1");
 
                     b.ToTable("ExerciseMusclePart");
                 });
@@ -92,9 +82,6 @@ namespace FitPlanBuddy.Database.Migrations
                     b.Property<int>("WorkoutPlanId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExerciseId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Reps")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -103,16 +90,9 @@ namespace FitPlanBuddy.Database.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WorkoutPlanId1")
-                        .HasColumnType("int");
-
                     b.HasKey("ExerciseId", "WorkoutPlanId");
 
-                    b.HasIndex("ExerciseId1");
-
                     b.HasIndex("WorkoutPlanId");
-
-                    b.HasIndex("WorkoutPlanId1");
 
                     b.ToTable("WorkoutExercises");
                 });
@@ -146,27 +126,11 @@ namespace FitPlanBuddy.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("FitPlanBuddy.Domain.Models.Exercise", "Exercise")
-                        .WithMany()
-                        .HasForeignKey("ExerciseId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("FitPlanBuddy.Domain.Models.MusclePart", null)
                         .WithMany()
                         .HasForeignKey("MusclePartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("FitPlanBuddy.Domain.Models.MusclePart", "MusclePart")
-                        .WithMany()
-                        .HasForeignKey("MusclePartId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Exercise");
-
-                    b.Navigation("MusclePart");
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.WorkoutExercise", b =>
@@ -177,27 +141,11 @@ namespace FitPlanBuddy.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("FitPlanBuddy.Domain.Models.Exercise", "Exercise")
-                        .WithMany()
-                        .HasForeignKey("ExerciseId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("FitPlanBuddy.Domain.Models.WorkoutPlan", null)
                         .WithMany()
                         .HasForeignKey("WorkoutPlanId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("FitPlanBuddy.Domain.Models.WorkoutPlan", "WorkoutPlan")
-                        .WithMany()
-                        .HasForeignKey("WorkoutPlanId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Exercise");
-
-                    b.Navigation("WorkoutPlan");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,6 +3,7 @@ using FitPlanBuddy.Application.Dto.ExerciseDto;
 using FitPlanBuddy.Domain.Models;
 using FitPlanBuddy.Domain.Repositories;
 using MediatR;
+using Microsoft.Identity.Client;
 
 namespace FitPlanBuddy.Application.Features.Exercises.Queries.GetAll
 {
@@ -21,6 +22,7 @@ namespace FitPlanBuddy.Application.Features.Exercises.Queries.GetAll
         {
             var repo = await _unitOfWork.GetGenericRepositoryAsync<Exercise>();
             var exercises = await repo.GetAll();
+
             return _mapper.Map<IEnumerable<ExerciseRead>>(exercises);
         }
     }

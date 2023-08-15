@@ -20,6 +20,7 @@ namespace FitPlanBuddy.Application.IoC
             var config = new MapperConfiguration(options =>
             {
                 options.AddProfile<ExerciseProfile>();
+                options.AddProfile<MusclePartProfile>();
             });
 
             services.AddSingleton(s => config.CreateMapper());

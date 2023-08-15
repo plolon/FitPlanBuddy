@@ -12,7 +12,7 @@ namespace FitPlanBuddy.Database.IoC
         {
             services.AddDbContext<FPBDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("FPBdatabase"));
+                options.UseSqlServer(configuration.GetConnectionString("CoreDatabase"));
             });
             services.RegisterRepositories();
 
