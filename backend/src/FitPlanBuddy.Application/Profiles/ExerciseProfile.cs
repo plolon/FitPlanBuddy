@@ -9,6 +9,7 @@ namespace FitPlanBuddy.Application.Profiles
         public ExerciseProfile()
         {
             CreateMap<Exercise, ExerciseRead>().ReverseMap();
+            CreateMap<Exercise, ExerciseWithDetailsRead>().ReverseMap();
         }
     }
 }
