@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FitPlanBuddy.Database.Repositories;
+using FitPlanBuddy.Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,6 +14,16 @@ namespace FitPlanBuddy.Database.IoC
             {
                 options.UseSqlServer(configuration.GetConnectionString("FPBdatabase"));
             });
+            services.RegisterRepositories();
+
+            return services;
+        }
+
+        private static IServiceCollection RegisterRepositories(this IServiceCollection services)
+        {
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;
         }

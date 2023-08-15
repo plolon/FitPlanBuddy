@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        IEnumerable<MusclePart> MuscleParts { get; set; }
+        public IEnumerable<MusclePart> MuscleParts { get; set; }
     }
 }
