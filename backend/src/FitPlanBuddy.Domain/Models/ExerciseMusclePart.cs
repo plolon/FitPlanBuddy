@@ -1,6 +1,6 @@
 ﻿namespace FitPlanBuddy.Domain.Models
 {
-    public class ExerciseMuscleParts
+    public class ExerciseMusclePart
     {
         public int ExerciseId { get; set; }
         public Exercise Exercise { get; set; }

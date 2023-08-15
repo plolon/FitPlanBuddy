@@ -1,4 +1,6 @@
-﻿namespace FitPlanBuddy.Domain.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FitPlanBuddy.Domain.Models
 {
     public abstract class DomainEntity
     {
