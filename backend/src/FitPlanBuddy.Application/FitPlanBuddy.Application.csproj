@@ -16,10 +16,4 @@
     <ProjectReference Include="..\FitPlanBuddy.domain\FitPlanBuddy.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Exercises\Queries\GetAllWithDetails\" />
-    <Folder Include="Features\Exercises\Queries\GetById\" />
-    <Folder Include="Features\Exercises\Queries\GetByIdWithDetails\" />
-  </ItemGroup>
-
 </Project>
