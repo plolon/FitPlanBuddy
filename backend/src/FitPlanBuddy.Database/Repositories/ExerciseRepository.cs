@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FitPlanBuddy.Database.Repositories
 {
-    public class ExerciseRepository : IExerciseRepository
+    public class ExerciseRepository : GenericRepository<Exercise>, IExerciseRepository
     {
         private readonly FPBDbContext _dbContext;
 
-        public ExerciseRepository(FPBDbContext dbContext)
+        public ExerciseRepository(FPBDbContext dbContext) : base(dbContext)
         {
-            _dbContext = dbContext;
         }
+
         public async Task<IEnumerable<Exercise>> GetAllExercisesWithDetails()
         {
             return await _dbContext.Exercises

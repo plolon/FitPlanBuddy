@@ -2,7 +2,7 @@
 
 namespace FitPlanBuddy.Domain.Repositories
 {
-    public interface IExerciseRepository
+    public interface IExerciseRepository : IGenericRepository<Exercise>
     {
         Task<IEnumerable<Exercise>> GetAllExercisesWithDetails();
         Task<Exercise> GetExerciseWithDetails(int id);
