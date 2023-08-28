@@ -23,6 +23,7 @@ namespace FitPlanBuddy.Database.IoC
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped<IWorkoutPlanRepository, WorkoutPlanRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;
