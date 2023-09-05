@@ -39,7 +39,7 @@ namespace FitPlanBuddy.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Exercises");
+                    b.ToTable("Exercises", (string)null);
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.ExerciseMusclePart", b =>
@@ -54,7 +54,7 @@ namespace FitPlanBuddy.Database.Migrations
 
                     b.HasIndex("MusclePartId");
 
-                    b.ToTable("ExerciseMusclePart");
+                    b.ToTable("ExerciseMusclePart", (string)null);
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.MusclePart", b =>
@@ -71,7 +71,7 @@ namespace FitPlanBuddy.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MuscleParts");
+                    b.ToTable("MuscleParts", (string)null);
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.WorkoutExercise", b =>
@@ -94,7 +94,7 @@ namespace FitPlanBuddy.Database.Migrations
 
                     b.HasIndex("WorkoutPlanId");
 
-                    b.ToTable("WorkoutExercises");
+                    b.ToTable("WorkoutExercises", (string)null);
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.WorkoutPlan", b =>
@@ -115,7 +115,7 @@ namespace FitPlanBuddy.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WorkoutPlans");
+                    b.ToTable("WorkoutPlans", (string)null);
                 });
 
             modelBuilder.Entity("FitPlanBuddy.Domain.Models.ExerciseMusclePart", b =>

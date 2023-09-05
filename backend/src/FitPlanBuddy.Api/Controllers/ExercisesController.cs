@@ -1,4 +1,5 @@
 ﻿using FitPlanBuddy.Application.Dto.ExerciseDto;
+using FitPlanBuddy.Application.Features.Exercises.Commands.CreateExercise;
 using FitPlanBuddy.Application.Features.Exercises.Queries.GetAll;
 using FitPlanBuddy.Application.Features.Exercises.Queries.GetAllByMusclePart;
 using FitPlanBuddy.Application.Features.Exercises.Queries.GetAllWithDetails;
@@ -36,6 +37,12 @@ namespace FitPlanBuddy.Api.Controllers
         public async Task<IActionResult> GetAllByMuscleParts(int id)
         {
             return Ok(await _mediator.Send(new GetAllExercisesByMusclePartRequest(id)));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateExercise(ExerciseSave exercise)
+        {
+            return Ok(await _mediator.Send(new CreateExerciseRequest(exercise)));
         }
     }
 }

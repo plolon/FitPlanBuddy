@@ -16,4 +16,9 @@
     <ProjectReference Include="..\FitPlanBuddy.domain\FitPlanBuddy.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Exercises\Commands\DeleteExercise\" />
+    <Folder Include="Features\Exercises\Commands\UpdateExercise\" />
+  </ItemGroup>
+
 </Project>

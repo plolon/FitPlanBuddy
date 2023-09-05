@@ -10,6 +10,9 @@ namespace FitPlanBuddy.Application.Profiles
         {
             CreateMap<Exercise, ExerciseRead>().ReverseMap();
             CreateMap<Exercise, ExerciseWithDetailsRead>().ReverseMap();
+
+            CreateMap<ExerciseSave, Exercise>()
+                .ForMember(src => src.MuscleParts, opt => opt.Ignore());
         }
     }
 }
