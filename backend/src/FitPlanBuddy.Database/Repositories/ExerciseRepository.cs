@@ -1,5 +1,4 @@
-﻿using Azure.Core;
-using FitPlanBuddy.Domain.Models;
+﻿using FitPlanBuddy.Domain.Models;
 using FitPlanBuddy.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,15 +35,32 @@ namespace FitPlanBuddy.Database.Repositories
             if (musclePartsIds is not null)
             {
                 exercise.MuscleParts = new List<MusclePart>();
-                foreach (var id in musclePartsIds)
+                foreach (var musclePartId in musclePartsIds)
                 {
-                    var musclePart = await _dbContext.MuscleParts.FindAsync(id);
+                    var musclePart = await _dbContext.MuscleParts.FindAsync(musclePartId);
                     if (musclePart is not null)
                         exercise.MuscleParts.Add(musclePart);
                 }
             }
 
             await _dbContext.Exercises.AddAsync(exercise);
+
+            return exercise;
+        }
+        public async Task<Exercise> UpdateExerciseWithDetails(Exercise exercise, IEnumerable<int> musclePartsIds = null)
+        {
+            if (musclePartsIds is not null)
+            {
+                exercise.MuscleParts.Clear();
+                foreach (var musclePartId in musclePartsIds)
+                {
+                    var musclePart = await _dbContext.MuscleParts.FindAsync(musclePartId);
+                    if (musclePart is not null)
+                        exercise.MuscleParts.Add(musclePart);
+                }
+            }
+
+            _dbContext.Exercises.Update(exercise);
 
             return exercise;
         }

@@ -9,5 +9,6 @@ namespace FitPlanBuddy.Domain.Repositories
         Task<IEnumerable<Exercise>> GetExercisesByMusclePart(int id);
 
         Task<Exercise> CreateExerciseWithDetails(Exercise exercise, IEnumerable<int> musclePartsIds = null);
+        Task<Exercise> UpdateExerciseWithDetails(Exercise exercise, IEnumerable<int> musclePartsIds = null);
     }
 }
