@@ -1,9 +1,16 @@
 using FitPlanBuddy.Application.IoC;
 using FitPlanBuddy.Database.IoC;
+using Microsoft.Extensions.Options;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+//    .AddJsonOptions(opt =>
+//{
+//    opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+//    opt.JsonSerializerOptions.WriteIndented = true;
+//});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.RegisterDatabaseServices(builder.Configuration);

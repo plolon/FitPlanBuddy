@@ -1,4 +1,4 @@
-﻿using FitPlanBuddy.Domain.Models;
+﻿using FitPlanBuddy.Application.Dto.ExerciseDto;
 
 namespace FitPlanBuddy.Application.Dto.WorkoutPlanDto
 {
@@ -7,7 +7,7 @@ namespace FitPlanBuddy.Application.Dto.WorkoutPlanDto
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public IEnumerable<Exercise> Exercises { get; set; }
+        public ICollection<ExerciseWithDataRead> Exercises { get; set; }
 
     }
 }

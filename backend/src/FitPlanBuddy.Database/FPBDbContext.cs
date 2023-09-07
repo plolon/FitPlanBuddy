@@ -14,19 +14,18 @@ namespace FitPlanBuddy.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<WorkoutExercise>().HasKey(q => new { q.ExerciseId, q.WorkoutPlanId });
+
             modelBuilder.Entity<Exercise>()
                 .HasMany(x => x.MuscleParts)
                 .WithMany(x => x.Exercises)
-                .UsingEntity<ExerciseMusclePart>(
-                    x => x.HasOne<MusclePart>().WithMany().HasForeignKey(x => x.MusclePartId),
-                    x => x.HasOne<Exercise>().WithMany().HasForeignKey(x => x.ExerciseId));
+                .UsingEntity<ExerciseMusclePart>();
 
             modelBuilder.Entity<WorkoutPlan>()
                 .HasMany(x => x.Exercises)
                 .WithMany(x => x.WorkoutPlans)
-                .UsingEntity<WorkoutExercise>(
-                    x => x.HasOne<Exercise>().WithMany().HasForeignKey(x => x.ExerciseId),
-                    x => x.HasOne<WorkoutPlan>().WithMany().HasForeignKey(x => x.WorkoutPlanId));
+                .UsingEntity<WorkoutExercise>();
+
 
             base.OnModelCreating(modelBuilder);
         }
