@@ -10,6 +10,7 @@ namespace FitPlanBuddy.Database.Repositories
 
         public ExerciseRepository(FPBDbContext dbContext) : base(dbContext)
         {
+            _dbContext = dbContext;
         }
 
         public async Task<IEnumerable<Exercise>> GetAllExercisesWithDetails()
@@ -27,6 +28,41 @@ namespace FitPlanBuddy.Database.Repositories
         public async Task<IEnumerable<Exercise>> GetExercisesByMusclePart(int id)
         {
             return _dbContext.Exercises.Where(x => x.MuscleParts.Any(x => x.Id.Equals(id)));
+        }
+
+        public async Task<Exercise> CreateExerciseWithDetails(Exercise exercise, IEnumerable<int> musclePartsIds = null)
+        {
+            if (musclePartsIds is not null)
+            {
+                exercise.MuscleParts = new List<MusclePart>();
+                foreach (var musclePartId in musclePartsIds)
+                {
+                    var musclePart = await _dbContext.MuscleParts.FindAsync(musclePartId);
+                    if (musclePart is not null)
+                        exercise.MuscleParts.Add(musclePart);
+                }
+            }
+
+            await _dbContext.Exercises.AddAsync(exercise);
+
+            return exercise;
+        }
+        public async Task<Exercise> UpdateExerciseWithDetails(Exercise exercise, IEnumerable<int> musclePartsIds = null)
+        {
+            if (musclePartsIds is not null)
+            {
+                exercise.MuscleParts.Clear();
+                foreach (var musclePartId in musclePartsIds)
+                {
+                    var musclePart = await _dbContext.MuscleParts.FindAsync(musclePartId);
+                    if (musclePart is not null)
+                        exercise.MuscleParts.Add(musclePart);
+                }
+            }
+
+            _dbContext.Exercises.Update(exercise);
+
+            return exercise;
         }
     }
 }

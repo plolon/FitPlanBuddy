@@ -4,7 +4,8 @@
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public IEnumerable<MusclePart> MuscleParts { get; set; }
-        public IEnumerable<WorkoutPlan> WorkoutPlans { get; set; }
+        public virtual ICollection<MusclePart> MuscleParts { get; set; }
+        public virtual ICollection<WorkoutPlan> WorkoutPlans { get; set; }
+        public virtual ICollection<WorkoutExercise> WorkoutExercises { get; set; }
     }
 }

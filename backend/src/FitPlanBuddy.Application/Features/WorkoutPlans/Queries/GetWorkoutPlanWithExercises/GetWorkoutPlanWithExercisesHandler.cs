@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FitPlanBuddy.Application.Dto.WorkoutPlanDto;
+using FitPlanBuddy.Domain.Models;
 using FitPlanBuddy.Domain.Repositories;
 using MediatR;
 
@@ -20,7 +21,25 @@ namespace FitPlanBuddy.Application.Features.WorkoutPlans.Queries.GetWorkoutPlanW
         {
             var repo = _unitOfWork.WorkoutPlanRepository;
             var workoutPlan = await repo.GetWithExercises(request.Id);
-            return _mapper.Map<WorkoutPlanWithExercisesRead>(workoutPlan);
+
+            var response = _mapper.Map<WorkoutPlanWithExercisesRead>(workoutPlan);
+            response = MapRepsAndSeriesToResponse(response, workoutPlan);
+
+            return response;
+        }
+
+        private WorkoutPlanWithExercisesRead MapRepsAndSeriesToResponse(WorkoutPlanWithExercisesRead response, WorkoutPlan workoutPlan)
+        {
+            foreach (var exercise in response.Exercises)
+            {
+                var workoutExercise = workoutPlan.WorkoutExercises.FirstOrDefault(x => x.WorkoutPlanId.Equals(response.Id) && x.ExerciseId.Equals(exercise.Id));
+                if (workoutExercise is not null)
+                {
+                    exercise.Reps = workoutExercise.Reps;
+                    exercise.Series = workoutExercise.Series;
+                }
+            }
+            return response;
         }
     }
 }

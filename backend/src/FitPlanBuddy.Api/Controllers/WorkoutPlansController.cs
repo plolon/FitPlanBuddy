@@ -1,4 +1,9 @@
-﻿using FitPlanBuddy.Application.Features.WorkoutPlans.Queries.GetAll;
+﻿using FitPlanBuddy.Application.Dto.WorkoutPlanDto;
+using FitPlanBuddy.Application.Features.WorkoutPlans.Commands.AssignExercise;
+using FitPlanBuddy.Application.Features.WorkoutPlans.Commands.CreateWorkoutPlan;
+using FitPlanBuddy.Application.Features.WorkoutPlans.Commands.DeleteWorkoutPlan;
+using FitPlanBuddy.Application.Features.WorkoutPlans.Commands.UpdateWorkoutPlan;
+using FitPlanBuddy.Application.Features.WorkoutPlans.Queries.GetAll;
 using FitPlanBuddy.Application.Features.WorkoutPlans.Queries.GetWorkoutPlanWithExercises;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +30,30 @@ namespace FitPlanBuddy.Api.Controllers
         public async Task<IActionResult> Get(int id)
         {
             return Ok(await _mediator.Send(new GetWorkoutPlanWithExercisesRequest(id)));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(WorkoutPlanSave workoutPlan)
+        {
+            return Ok(await _mediator.Send(new CreateWorkoutPlanRequest(workoutPlan)));
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            return Ok(await _mediator.Send(new DeleteWorkoutPlanRequest(id)));
+        }
+
+        [HttpPut("/assignExercise")]
+        public async Task<IActionResult> AssignExercises(AssignExerciseRequest assignExercise)
+        {
+            return Ok(await _mediator.Send(assignExercise));
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(WorkoutPlanSave workoutPlan, int id)
+        {
+            return Ok(await _mediator.Send(new UpdateWorkoutPlanRequest(id, workoutPlan)));
         }
     }
 }
